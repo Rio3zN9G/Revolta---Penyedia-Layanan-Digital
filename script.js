@@ -24,7 +24,7 @@ function tampilkanHarga(kategori) {
         card.innerHTML = `
             <h2>${item.nama}</h2>
             <p>Harga: <strong>Rp ${item.harga.toLocaleString()}</strong></p>
-            <a href="https://wa.me/6281327414126?text=Halo,%20saya%20ingin%20memesan%20${encodeURIComponent(item.nama)}%20seharga%20Rp${item.harga.toLocaleString()}" target="_blank" class="wa-button">
+            <a href="https://wa.me/6285189119169?text=Halo,%20saya%20ingin%20memesan%20${encodeURIComponent(item.nama)}%20seharga%20Rp${item.harga.toLocaleString()}" target="_blank" class="wa-button">
                 WhatsApp
             </a>
         `;
