@@ -1,0 +1,306 @@
+/* Efek Partikel & Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Efek Cahaya Bergerak */
+.light-effect, .light-effect-2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, rgba(0, 0, 0, 0) 80%);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: moveLight 6s infinite alternate ease-in-out;
+}
+
+@keyframes moveLight {
+    0% { top: 15%; left: 15%; }
+    100% { top: 70%; left: 80%; }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ff758c;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Menu aktif (Hamburger Menu) */
+.navbar.active .hamburger {
+    display: flex;
+}
+
+.navbar.active .nav-links {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar.active .nav-links li {
+    margin: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Tombol CTA */
+.cta {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    padding: 12px 24px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(255, 117, 140, 0.8);
+}
+
+.cta:hover {
+    transform: scale(1.05);
+}
+
+/* Seksi */
+.section {
+    padding: 60px 20px;
+}
+
+/* Daftar Harga */
+.price-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.5);
+}
+
+/* Testimoni */
+.testimonial {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Tombol WhatsApp */
+.wa-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #25d366, #128c7e);
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.wa-button:hover {
+    background: linear-gradient(90deg, #128c7e, #25d366);
+    transform: scale(1.05);
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar.active .nav-links {
+        display: block;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .price-list {
+        flex-direction: column;
+    }
+}
+
+.category-buttons {
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #ff758c;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.alamat {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.alamat h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ff758c;
+}
+
+.alamat p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.alamat-map-link {
+    display: inline-block;
+    background: #ff758c;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.alamat-map-link:hover {
+    background: #ff7eb3;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .alamat {
+        padding: 15px;
+    }
+    .alamat h3 {
+        font-size: 1.5rem;
+    }
+    .alamat p {
+        font-size: 0.9rem;
+    }
+}
+
+.foot {
+  width: 200px;
+  height: 100px;
+  margin-right: 1px;
+}
